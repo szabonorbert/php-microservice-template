@@ -8,7 +8,7 @@
 	ini_set('allow_url_fopen', 1);
     date_default_timezone_set('Europe/Budapest');
 
-    require_once ROOT . "vendor/autoload.php";
+    require_once ROOT . "../vendor/autoload.php";
     require_once ROOT . "include/connection.class.php";
     require_once ROOT . "include/functions.php";
     require_once ROOT . "config.php";

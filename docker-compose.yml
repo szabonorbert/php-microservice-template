@@ -7,24 +7,7 @@ services:
             context: .
             dockerfile: php.Dockerfile
         volumes:
-        #    - ./app:/var/www/html/:ro
             - ./app:/var/www/html/
         restart: always
         ports:
             - '8000:80'
-
-    db:
-        container_name: mysql
-        image: mysql
-        volumes:
-            - ./db:/var/lib/mysql
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: asqw12
-
-    phpmyadmin:
-        container_name: phpmyadmin
-        image: phpmyadmin
-        restart: always
-        ports:
-        - '8080:80'
