@@ -1,2 +1,2 @@
-db
-env_file
+/db
+./env_file
