@@ -5,13 +5,12 @@ RUN docker-php-ext-install mysqli opcache
 
 # apt installs
 RUN apt update
-RUN apt install unzip
 
 # composer install
 COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
 COPY ./composer.json /var/www/composer.json
 WORKDIR /var/www/
-RUN composer update
+RUN composer install
 
 # copy source files
 COPY . /var/www/html
